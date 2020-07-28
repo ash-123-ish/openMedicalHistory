@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+
+<style>
+*
+{
+margin: 0;
+padding: 0;
+}
+
+#loading
+{
+position: fixed;
+width: 100%;
+height: 100vh;
+background: #000
+url('https://media.giphy.com/media/VseXvvxwowwCc/giphy.gif') no-repeat center;
+z-index: 99999;
+}
+
+</style>
+
+<body onload="myfunction()">
+
+<div id="loading">
+
+</div>
+
+<h1>
+    This is a HomePage for Doctor's.
+</h1>
+<a href="/generate">
+    Generate Bill from here...
+</a>
+
+<script>
+var preloader = document.getElementById('loading');
+    function myfunction()
+    {
+    preloader.style.display = 'none';
+    }
+</script>
+</body>
+</html>

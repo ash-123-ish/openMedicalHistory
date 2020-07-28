@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        
+        <style>
+            .content-table{
+                border-collapse: collapse;
+                margin: 6% auto;
+                position: relative;
+                font-size: 0.9em;
+                min-width: 400px;
+                border-radius: 5px 5px 0 0;
+                overflow: hidden;
+                box-shadow: 0 0 20px rgba(0,0,0,0.15);
+                
+            }
+
+            .content-table thead tr{
+                background-color: #0ee9bd;
+                color: #fff;
+                text-align: left;
+                font-weight: bold;
+            }
+
+            .content-table th,
+            .content-table td{
+                padding: 12px 15px;
+            }
+
+            .content-table tbody tr{
+                border-bottom: 1px solid #dddddd;
+            }
+
+            .content-table tbody tr:nth-of-type(even){
+                background-color: #f3f3f3;
+            }
+
+            .content-table tbody tr:last-of-type{
+                border-bottom: 2px solid #0ee9bd;
+            }
+
+            .content-table tbody tr.active-row{
+                font-weight: bold;
+                color: #0ee9bd;
+            }
+            h1{
+                font-family: 'Nunito Sans', sans-serif;
+                color: #0ee9bd;
+                
+            }
+            hr{
+                color: rgb(224, 222, 222);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Styling HTML Tables w/ CSS</h1>
+        <hr>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Cr No.</th>
+                    <th>Date</th>
+                    <th>Diagnosis</th>
+                    <th>Drug Status</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>12-Dec-2019</td>
+                    <td>Food poisoning</td>
+                    <td>Not Collected</td>
+                    <td><a href="">More</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>13-Dec-2019</td>
+                    <td>Food poisoning</td>
+                    <td>Not Collected</td>
+                    <td><a href="">More</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>14-Dec-2019</td>
+                    <td>Food poisoning</td>
+                    <td>Not Collected</td>
+                    <td><a href="">More</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>15-Dec-2019</td>
+                    <td>Food poisoning</td>
+                    <td>Not Collected</td>
+                    <td><a href="">More</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

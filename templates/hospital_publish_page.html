@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="{{prescription.CR_no}}/publishimage" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    Upload Prescription : <input type="file" name="prescription_image">
+    <input type="text" placeholder="Staus of Patient" name="status">
+    <input type="submit" value="Publish">
+</form>
+
+</body>
+</html>

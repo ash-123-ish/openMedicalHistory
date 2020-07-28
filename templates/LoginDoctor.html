@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <!---'https://cdn.dribbble.com/users/156849/screenshots/6765545/37.gif',https://i.imgur.com/lK9xXsr.gif ,'https://images.pexels.com/photos/2276928/pexels-photo-2276928.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' ---->
+    <style>
+        body
+        {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        }
+        .hero
+        {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: linear-gradient(to right, #2ecc71,#3498db);
+        }
+        .box
+        {
+        width: 300px;
+        padding: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #191919;
+        text-align: center;
+        }
+        .box h1
+        {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+        }
+        .box input[type = "text"]
+        {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #3498db;
+        padding: 14px 10px;
+        width: 200px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+        }
+        .box input[type = "text"]:focus
+        {
+        width: 280px;
+        border-color: #2ecc71;
+        }
+        .box input[type = "submit"]
+        {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #2ecc71;
+        padding: 14px 40px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+        }
+        .box input[type = "submit"]:hover
+        {
+        background: #2ecc71;
+        }
+        #loading
+			{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				background: #000;
+				z-index: 99999;
+			}
+			.wavy
+			{
+				position: relative;
+				-webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
+			}
+			.wavy span
+			{
+				position: relative;
+				display: inline-block;
+				color: #fff;
+				font-size: 2em;
+				text-transform: uppercase;
+				animation: animate 1s ease-in-out infinite;
+				animation-delay: calc(0.1s * var(--i));
+			}
+			@keyframes animate{
+				0%
+				{
+					transform: translateY(0px);
+				}
+				20%
+				{
+					transform: translateY(-20px);
+				}
+				40%,100%
+				{
+					transform: translateY(0px);
+				}
+			}
+    </style>
+</head>
+<body onload="myfunction()">
+<div id="loading">
+    <div class="wavy">
+			<span style="--i:1;">L</span>
+			<span style="--i:2;">O</span>
+			<span style="--i:3;">A</span>
+			<span style="--i:4;">D</span>
+			<span style="--i:5;">I</span>
+			<span style="--i:6;">N</span>
+			<span style="--i:7;">G</span>
+			<span style="--i:8;">.</span>
+			<span style="--i:9;">.</span>
+			<span style="--i:10;">.</span>
+		</div>
+</div>
+<div class="hero">
+<form method="post" action="patientview" class="box">
+    <h1>Doctor Login</h1>
+    {% csrf_token %}
+    <input type="text" name="cr_no" placeholder="CR number">
+    <input type="submit" value="submit">
+
+    <a href="/">Patient</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="/doctor/register_Patient"> Register</a> &nbsp; &nbsp; &nbsp; &nbsp;
+    <a href="/medlab/patientreport">Medlab Login</a>
+</form>
+</div>
+<script>
+var preloader = document.getElementById('loading');
+    function myfunction()
+    {
+    preloader.style.display = 'none'
+    }
+</script>
+</body>
+</html>
